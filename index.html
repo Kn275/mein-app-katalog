@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#174b45">
+  <meta name="description" content="Ein persönlicher, übersichtlicher Katalog für iPhone-Web-Apps.">
+  <title>Meine Apps</title>
+  <style>
+    :root { color-scheme: light; --ink:#172a27; --muted:#465c58; --green:#174b45; --pale:#eaf3ef; --line:#c6d7d1; --amber:#fff4d6; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:#f5f8f6; color:var(--ink); font:20px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    header { background:var(--green); color:white; padding:2rem 1.1rem 1.7rem; }
+    .wrap { max-width:760px; margin:0 auto; }
+    h1 { font-size:clamp(2.2rem,8vw,3rem); line-height:1.1; margin:0 0 .5rem; }
+    header p { margin:.5rem 0 0; font-size:1.1rem; }
+    main { padding:1.2rem 1rem 3rem; }
+    nav { display:flex; flex-wrap:wrap; gap:.7rem; margin:0 0 1.4rem; }
+    nav a, .button { display:inline-flex; align-items:center; justify-content:center; min-height:56px; padding:.65rem 1rem; border-radius:12px; background:white; border:2px solid var(--green); color:var(--green); font-weight:700; text-decoration:none; }
+    nav a:focus-visible, .button:focus-visible { outline:4px solid #d88b00; outline-offset:3px; }
+    h2 { font-size:1.65rem; line-height:1.2; margin:1.4rem 0 .8rem; }
+    .card { background:white; border:1px solid var(--line); border-radius:18px; padding:1.2rem; box-shadow:0 2px 8px #173a3210; }
+    .card h3 { font-size:1.55rem; line-height:1.2; margin:0 0 .8rem; }
+    .button.primary { background:var(--green); color:white; min-height:64px; width:100%; font-size:1.15rem; margin:.2rem 0 1rem; }
+    dl { margin:0; }
+    dt { font-weight:750; margin-top:1rem; }
+    dd { margin:0; color:var(--muted); overflow-wrap:anywhere; }
+    .steps { padding-left:1.5rem; margin:.2rem 0 0; }
+    .steps li { padding:.15rem 0 .35rem .2rem; }
+    .todo { background:var(--amber); border-left:5px solid #bd7a00; border-radius:8px; padding:.45rem .7rem; display:inline-block; color:#47350c; }
+    .note { background:var(--pale); padding:1rem; border-radius:14px; margin-top:1rem; }
+    footer { color:var(--muted); font-size:.95rem; margin-top:1.6rem; }
+    @media (min-width:600px) { main { padding-top:1.7rem; } .card { padding:1.5rem; } }
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><h1>Meine Apps</h1><p>Deine persönlichen Apps – übersichtlich an einem Ort.</p></div></header>
+  <main class="wrap">
+    <nav aria-label="Seitennavigation"><a href="#apps">Zu meinen Apps</a><a href="#hinzufuegen">Eine App ergänzen</a></nav>
+    <section id="apps" aria-labelledby="apps-title">
+      <h2 id="apps-title">Deine Apps</h2>
+      <article class="card">
+        <h3>Meine Gesundheitskosten</h3>
+        <a class="button primary" href="https://kn275.github.io/meine-gesundheitskosten/">App öffnen</a>
+        <dl>
+          <dt>Installation auf dem iPhone</dt>
+          <dd><ol class="steps"><li>Öffne diese App-Seite in Safari.</li><li>Tippe auf „Teilen“ und dann auf „Zum Home-Bildschirm“.</li><li>Tippe auf „Hinzufügen“. Das Symbol erscheint auf deinem Home-Bildschirm.</li></ol></dd>
+          <dt>Repository und Programmdateien</dt>
+          <dd><a href="https://github.com/kn275/meine-gesundheitskosten/">GitHub-Repository öffnen</a></dd>
+          <dt>Wo deine persönlichen Daten gespeichert sind</dt>
+          <dd><span class="todo">Noch einzutragen</span></dd>
+          <dt>Datensicherung und Wiederherstellung</dt>
+          <dd>Im bisherigen Gespräch wurde bestätigt, dass die App eine Export- und Wiederherstellungsfunktion hat. Wo die Sicherungsdatei gespeichert wird und die genauen Schritte: <span class="todo">Noch einzutragen</span></dd>
+          <dt>Zuletzt geprüft</dt>
+          <dd>7. November 2026 (Links und Angaben aus dem bisherigen Gespräch; App-Funktionen nicht erneut geprüft)</dd>
+        </dl>
+      </article>
+    </section>
+    <section id="hinzufuegen" aria-labelledby="add-title">
+      <h2 id="add-title">Eine weitere App ergänzen</h2>
+      <div class="note">Kopiere in <strong>index.html</strong> den ganzen App-Eintrag – vom <code>&lt;article class="card"&gt;</code> bis zum passenden <code>&lt;/article&gt;</code> – und füge ihn darunter ein. Ändere Name, App-Link, Repository, Speicherort, Sicherung und Prüfdatum. Unbekannte Angaben als „Noch einzutragen“ stehen lassen.</div>
+    </section>
+    <footer>Diese Seite ist dein Wegweiser. Sie speichert selbst keine Gesundheitsdaten.</footer>
+  </main>
+</body>
+</html>
